@@ -1,0 +1,51 @@
+form.page-main__form.form
+  h2.form__title Доступные конфигурации
+  ul.form__list
+    li.form__item
+      fieldset.form__group
+        ul.form__config-list
+          li.form__config-item
+            label(for="vcpu").form__config-label vCPU
+            input(type="text" value="6" name="vcpu").form__config-input#vcpu
+            .form__slider.slider
+              .slider__line
+                .slider__point
+              p.slider__text 2
+              p.slider__text.slider__text--center 6 ядер
+              p.slider__text 12
+          li
+            label(for="gpu").form__config-label GPU
+            input(type="checkbox" name="gpu").form__config-ckeckbox#gpu
+          li
+            label(for="raid").form__config-label RAID
+            input(type="checkbox" name="raid").form__config-ckeckbox#raid
+          li
+            label(for="ssd").form__config-label SSD
+            input(type="checkbox" name="gpu").form__config-ckeckbox#ssd
+    li.form__item
+      h3.form__item-title Performance Line
+      fieldset.form__group
+        legend.form__group-title D8
+        p.form__item-text 2 × Intel Xeon E-2236 3.4 ГГц, 6 ядер
+        p.form__item-text 32 ГБ RAM
+        p.form__item-text 460 ГБ SSD
+        p.form__item-price 16 000 ₽/месяц
+        a(href="https://selectel.ru/").form__item-button.button Заказать
+    li.form__item
+      h3.form__item-title.form__item-title--hidden Performance Line
+      fieldset.form__group
+        legend.form__group-title C11
+        p.form__item-text 2 × Intel Xeon E5-1650 3.6 ГГц, 6 ядер
+        p.form__item-text 32 ГБ RAM
+        p.form__item-text 4 x 500 ГБ HDD
+        p.form__item-price 32 000 ₽/месяц
+        a(href="https://selectel.ru/").form__item-button.button Заказать
+    li.form__item
+      h3.form__item-title.form__item-title--hidden Performance Line
+      fieldset.form__group
+        legend.form__group-title C11
+        p.form__item-text 2 × Intel Xeon E3-3420 2.5 ГГц, 6 ядер
+        p.form__item-text 32 ГБ RAM
+        p.form__item-text 240 ГБ SSD
+        p.form__item-price 39 500 ₽/месяц
+        a(href="https://selectel.ru/").form__item-button.button Заказать
