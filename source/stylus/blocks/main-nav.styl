@@ -1,0 +1,72 @@
+.main-nav__list
+  display: flex
+  flex-wrap: wrap
+  list-style()
+
+.main-nav__link
+  position relative
+  display block
+
+  width: 24px
+  height 24px
+
+.main-nav__image
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+
+.main-nav__text
+  display: none
+
+@media(min-width: tablet-width)
+  .main-nav__link
+    width: 50px
+    height: 50px
+
+  .main-nav__image
+    width: 16px
+    height 12px
+
+    &--phone
+      width: 12px
+      height 13px
+
+    &--telegram
+      width: 12px
+      height 12px
+
+@media(min-width: desktop-width)
+  .main-nav
+    width: 60.2%
+
+  .main-nav__list
+    justify-content: space-between
+
+  .main-nav__link
+    width: auto
+    height: auto
+
+  .main-nav__image
+    top: 60%
+    left: 6px
+
+    transform: translate(0, -50%)
+
+    &--phone
+      top: 64%
+      left: 14px
+
+
+  .main-nav__text
+    display: inline
+    padding-top: 15px
+    padding-left: 30px
+    padding-right: 6px
+    padding-bottom: 15px
+
+    font-size: 12px
+    letter-spacing: 0.0025em
+
+    color: font-gray
+
