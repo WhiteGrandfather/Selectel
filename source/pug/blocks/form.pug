@@ -2,24 +2,24 @@ form.page-main__form.form
   h2.form__title Доступные конфигурации
   ul.form__list
     li.form__item
-      fieldset.form__group
+      fieldset.form__group.form__group--config
         ul.form__config-list
-          li.form__config-item
+          li.form__config-item.form__config-item--slider
             label(for="vcpu").form__config-label vCPU
             input(type="text" value="6" name="vcpu").form__config-input#vcpu
             .form__slider.slider
               .slider__line
                 .slider__point
-              p.slider__text 2
+              p.slider__text.slider__text--left 2
               p.slider__text.slider__text--center 6 ядер
-              p.slider__text 12
-          li
+              p.slider__text.slider__text--right 12
+          li.form__config-item
             label(for="gpu").form__config-label GPU
             input(type="checkbox" name="gpu").form__config-ckeckbox#gpu
-          li
+          li.form__config-item
             label(for="raid").form__config-label RAID
             input(type="checkbox" name="raid").form__config-ckeckbox#raid
-          li
+          li.form__config-item
             label(for="ssd").form__config-label SSD
             input(type="checkbox" name="gpu").form__config-ckeckbox#ssd
     li.form__item
