@@ -15,29 +15,139 @@
   letter-spacing: 0.0025em
   text-align: center
 
-.form__list
-  list-style()
+.form__item
+  padding-bottom: 16px
+
+  &--config
+    padding-bottom: 2px
+
+.form__item-title
+  padding-bottom: 5px
+
+  font-weight: 400
+  font-size: 14px
+  line-height: 120%
+  letter-spacing: 0.0025em
+
+  &--hidden
+    visually-hidden()
+    display: none
+
+.form__group-wrapper
+  padding: 15px 14px
+
+  border: 1px solid font-gray
+  border-radius: 7px
 
 .form__group
   margin: 0
   padding: 0
 
+  border: none
+
   &--config
+    min-height: auto
     padding-top: 10px
     padding-right: 10px
-    border: none
 
-.form__config-list
-  list-style()
+.form__group-title
+  padding-top: 3px
+  padding-bottom: 2px
+  font-weight: 800
+  font-size: 12px
+  line-height: 120%
+  letter-spacing: 0.0025em
+
+.form__item-text
+  min-height: 25px
+
+.form__item-price
+  padding-top: 5px
+  padding-bottom: 5px
+
+  font-weight: 800
 
 .form__config-item
   display: flex
   justify-content: space-between
   align-items: center
 
-.form__config-label
-  background-color: lightgray
+  &--slider
+    padding-bottom: 28px
 
-.form__config-input
+  &--checkbox
+    position relative
+
+.form__config-label
+  cursor pointer
+
+  &--slider
+    align-self: flex-start
+    padding-top: 7px
+
+  &--checkbox
+    width: 100%
+    padding-top: 1px
+    padding-left: 28px
+    min-height: 39px
+
+.form__icon-checkbox
+  position: absolute
+  content: ""
+  top: 0
+  left: 1px
+  z-index -1
+
+  fill: font-black
+
+  &--checked
+    display: none
+
+.form__config-ckeckbox
+  &:checked ~ .form__icon-checkbox--checked
+    display: block
+    fill: #0971F5
+
+  &:disabled ~ .form__icon-checkbox
+    fill: font-disable
+
+.form__config-input,
+.form__config-ckeckbox
   visually-hidden()
+
+@media(min-width: tablet-width)
+  .form
+    width: 92.18%
+
+  .form__title
+    font-size: 26px
+    padding-bottom: 13px
+
+  .form__config-list
+    display: flex
+    padding-right: 15px
+
+  .form__config-item
+    &--checkbox
+      margin-left: 45px
+      padding-top: 2px
+
+      align-items: flex-start
+
+    &--slider
+      width: 47.9%
+      margin-right: auto
+
+  .form__config-label
+    &--checkbox
+      min-width: 70px
+
+      font-size: 16px
+
+    &--slider
+      font-size: 18px
+
+  .form__icon-checkbox
+    top: 2px
+    left: 2px
 

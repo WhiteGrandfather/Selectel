@@ -40,6 +40,8 @@
   width: 26px
   height 26px
 
+  cursor: pointer
+
   &::after
     position absolute
     content: ""
@@ -55,13 +57,17 @@
     border-radius: 50%
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.18)
 
+  &:active::after
+    width: 15px
+    height: 15px
+
 .slider__text
   position: absolute
   content: ""
 
   top: 8px
 
-  color: #C8C8C8
+  color: font-disable
 
   &--center
     top: 15px
@@ -72,3 +78,10 @@
 
   &--right
     right 0
+
+@media(min-width: tablet-width)
+  .slider
+    width: 246px
+
+  .slider__text--center
+    font-size: 14px

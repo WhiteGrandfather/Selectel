@@ -4,7 +4,6 @@
 
   margin-center()
   padding-top: 19px
-  padding-bottom: 149px
 
 .banner__title
   padding-bottom: 5px
@@ -24,6 +23,9 @@
   letter-spacing: 0.0025em
   color: font-gray
 
+.banner__text br
+  display: none
+
 .banner__button
   align-self: flex-start
 
@@ -31,3 +33,57 @@
   position: absolute
   right 2.8%
   bottom: 0
+
+@media (min-width: tablet-width)
+  .bunner__container
+    width: 91.8%
+    padding-top: 45px
+    padding-bottom: 20px
+
+  .banner__title
+    margin-bottom: 0
+    padding-bottom: 16px
+    font-size: 26px
+
+  .banner__text
+    width 410px
+    padding-bottom: 25px
+
+    font-size: 16px
+
+  .banner__text br:not(:nth-child(2))
+    display: block
+
+  .banner__image
+    top: 34px
+    right 2px
+    width: 293px
+    height auto
+
+
+@media(min-width: desktop-width)
+  .bunner__container
+    width: 81.66%
+    padding-top: 60px
+    padding-left: 40px
+    padding-bottom: 50px
+
+  .banner__title
+    padding-bottom: 17px
+
+    font-size: 32px
+
+  .banner__text
+    width 528px
+    padding-bottom: 26px
+
+    font-size: 18px
+
+  .banner__text br:not(:nth-child(2))
+    display: none
+
+  .banner__image
+    top: 29px
+    right: 0
+
+    width: 380px

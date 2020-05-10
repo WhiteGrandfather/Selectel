@@ -1,51 +1,65 @@
-form.page-main__form.form
+.page-main__form.form
   h2.form__title Доступные конфигурации
   ul.form__list
-    li.form__item
+    li.form__item.form__item--config
       fieldset.form__group.form__group--config
         ul.form__config-list
           li.form__config-item.form__config-item--slider
-            label(for="vcpu").form__config-label vCPU
+            label(for="vcpu").form__config-label.form__config-label--slider vCPU
             input(type="text" value="6" name="vcpu").form__config-input#vcpu
-            .form__slider.slider
-              .slider__line
-                .slider__point
-              p.slider__text.slider__text--left 2
-              p.slider__text.slider__text--center 6 ядер
-              p.slider__text.slider__text--right 12
-          li.form__config-item
-            label(for="gpu").form__config-label GPU
+            include slider
+          li.form__config-item.form__config-item--checkbox
+            label(for="gpu").form__config-label.form__config-label--checkbox GPU
             input(type="checkbox" name="gpu").form__config-ckeckbox#gpu
-          li.form__config-item
-            label(for="raid").form__config-label RAID
+            svg(width="18" height="18" viewBox="0 0 18 18").form__icon-checkbox
+              use(href="#icon-checkbox-unchecked")
+            svg(width="18" height="18" viewBox="0 0 18 18").form__icon-checkbox.form__icon-checkbox--checked
+              use(href="#icon-checkbox-checked")
+          li.form__config-item.form__config-item--checkbox
+            label(for="raid").form__config-label.form__config-label--checkbox RAID
             input(type="checkbox" name="raid").form__config-ckeckbox#raid
-          li.form__config-item
-            label(for="ssd").form__config-label SSD
+            svg(width="18" height="18" viewBox="0 0 18 18").form__icon-checkbox
+              use(href="#icon-checkbox-unchecked")
+            svg(width="18" height="18" viewBox="0 0 18 18").form__icon-checkbox.form__icon-checkbox--checked
+              use(href="#icon-checkbox-checked")
+            input(type="checkbox" name="raid").form__config-ckeckbox#raid
+          li.form__config-item.form__config-item--checkbox
+            label(for="ssd").form__config-label.form__config-label--checkbox SSD
             input(type="checkbox" name="gpu").form__config-ckeckbox#ssd
+            svg(width="18" height="18" viewBox="0 0 18 18").form__icon-checkbox
+              use(href="#icon-checkbox-unchecked")
+            svg(width="18" height="18" viewBox="0 0 18 18").form__icon-checkbox.form__icon-checkbox--checked
+              use(href="#icon-checkbox-checked")
     li.form__item
       h3.form__item-title Performance Line
-      fieldset.form__group
-        legend.form__group-title D8
-        p.form__item-text 2 × Intel Xeon E-2236 3.4 ГГц, 6 ядер
-        p.form__item-text 32 ГБ RAM
-        p.form__item-text 460 ГБ SSD
-        p.form__item-price 16 000 ₽/месяц
-        a(href="https://selectel.ru/").form__item-button.button Заказать
+      .form__group-wrapper
+        fieldset.form__group
+          legend.form__group-title D8
+          p.form__item-text 2 × Intel Xeon E-2236 3.4 ГГц, 6 ядер
+          p.form__item-text 32 ГБ RAM
+          p.form__item-text 460 ГБ SSD
+          p.form__item-price 16 000 ₽/месяц
+          form(action="https://selectel.ru/" type="_blanc")
+            button(type="submit").form__item-button.button.button--bordered Заказать
     li.form__item
       h3.form__item-title.form__item-title--hidden Performance Line
-      fieldset.form__group
-        legend.form__group-title C11
-        p.form__item-text 2 × Intel Xeon E5-1650 3.6 ГГц, 6 ядер
-        p.form__item-text 32 ГБ RAM
-        p.form__item-text 4 x 500 ГБ HDD
-        p.form__item-price 32 000 ₽/месяц
-        a(href="https://selectel.ru/").form__item-button.button Заказать
+      .form__group-wrapper
+        fieldset.form__group
+          legend.form__group-title C11
+          p.form__item-text 2 × Intel Xeon E5-1650 3.6 ГГц, 6 ядер
+          p.form__item-text 32 ГБ RAM
+          p.form__item-text 4 x 500 ГБ HDD
+          p.form__item-price 32 000 ₽/месяц
+          form(action="https://selectel.ru/" type="_blanc")
+            button(type="submit").form__item-button.button.button--bordered Заказать
     li.form__item
       h3.form__item-title.form__item-title--hidden Performance Line
-      fieldset.form__group
-        legend.form__group-title C11
-        p.form__item-text 2 × Intel Xeon E3-3420 2.5 ГГц, 6 ядер
-        p.form__item-text 32 ГБ RAM
-        p.form__item-text 240 ГБ SSD
-        p.form__item-price 39 500 ₽/месяц
-        a(href="https://selectel.ru/").form__item-button.button Заказать
+      .form__group-wrapper
+        fieldset.form__group
+          legend.form__group-title C11
+          p.form__item-text 2 × Intel Xeon E3-3420 2.5 ГГц, 6 ядер
+          p.form__item-text 32 ГБ RAM
+          p.form__item-text 240 ГБ SSD
+          p.form__item-price 39 500 ₽/месяц
+          form(action="https://selectel.ru/" type="_blanc")
+            button(type="submit").form__item-button.button.button--bordered Заказать
