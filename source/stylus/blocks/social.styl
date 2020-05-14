@@ -20,3 +20,28 @@
 
 .social__text
   visually-hidden()
+
+@media(min-width: tablet-width)
+  .social
+    justify-content: space-between
+
+    width: 120px
+    padding-top: 15px
+
+  .social__item--instagram
+    order: 1
+
+  .social__link
+    padding: 5px 4px
+
+@media(min-width: desktop-width)
+  .social
+    width: 148px
+    padding-top: 30px
+
+  .social__link
+    padding: 0
+
+  .social__ico
+    width: 22px
+    height: auto

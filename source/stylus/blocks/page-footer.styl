@@ -1,6 +1,9 @@
 .page-footer
   padding-top: 5px
 
+.page-footer__shadow
+  box-shadow: 0px -1px 5px rgba(0, 0, 0, 0.1)
+
 .page-footer__container
   margin: auto
   padding-top: 22px
@@ -8,13 +11,11 @@
   padding-right: 20px
   padding-bottom: 10px
 
-  box-shadow: 0px -1px 5px rgba(0, 0, 0, 0.1)
-
 .page-footer__list
   display: flex
   justify-content: space-between
 
-.page-footer__logo-link
+.page-footer__logo
   padding-left: 3px
 
 .page-footer__item--links-block
@@ -47,3 +48,62 @@
 
   &:active
     color: font-black
+
+
+@media(min-width: tablet-width)
+  .page-footer__container
+    width: 92.25%
+    padding: 0
+    padding-top: 30px
+
+  .page-footer__item--logo-block
+    padding-top: 2px
+
+  .page-footer__logo
+    padding: 0
+
+  .page-footer__links-list
+    max-width: 560px
+
+  .page-footer__link-item
+    width: 118px
+    padding-bottom: 7px
+
+    order: 100
+
+    &:nth-child(1)
+      order: 0
+
+    &:nth-child(7)
+      order: 1
+
+    &:nth-child(4)
+      order: 2
+
+    &:nth-child(2)
+      order: 3
+
+    &:nth-child(5)
+      order: 4
+
+    &:nth-child(3)
+      order: 5
+
+    &:nth-child(8)
+      order: 6
+
+@media(min-width: desktop-width)
+  .page-footer__container
+    max-width: 892px
+    padding-top: 38px
+
+  .page-footer__links-list
+    max-width: 700px
+
+  .page-footer__link-item
+    width: 142px
+    padding-bottom: 14пшеpx
+
+  .page-footer__link
+    font-size: 14px
+
