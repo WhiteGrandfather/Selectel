@@ -15,6 +15,9 @@
   letter-spacing: 0.0025em
   text-align: center
 
+.form__item:not(:nth-child(2)) .form__item-title
+  visually-hidden()
+
 .form__item
   padding-bottom: 16px
 
@@ -29,9 +32,6 @@
   line-height: 120%
   letter-spacing: 0.0025em
 
-  &--hidden
-    visually-hidden()
-    display: none
 
 .form__group-wrapper
   padding: 15px 14px
@@ -61,14 +61,20 @@
 .form__item-text
   min-height: 25px
 
+  &--gpu
+    display: none
+
 .form__item-text br
   display: none
 
 .form__item-price
   padding-top: 5px
-  padding-bottom: 5px
 
   font-weight: 800
+
+  &--text
+    display inline
+    padding-bottom: 5px
 
 .form__config-item
   display: flex

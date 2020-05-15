@@ -1,0 +1,17 @@
+template#form-item
+  li.form__item.form__item--server
+    h3.form__item-title Performance Line
+    .form__group-wrapper
+      fieldset.form__group
+        legend.form__group-title D8
+        .form__group-container
+          .form__text-wrapper
+            p.form__item-text.form__item-text--processor 2 × Intel Xeon E-2236 #[br]3.4 ГГц, 6 ядер
+            p.form__item-text.form__item-text--ram 32 ГБ RAM
+            p.form__item-text.form__item-text--drive 460 ГБ SSD
+            p.form__item-text.form__item-text--gpu 8 × GTX 1080
+          .fotm__price-container
+            p.form__item-price 16 000
+              .form__item-price.form__item-price--text ₽/месяц
+            form(action="https://selectel.ru/" type="_blanc")
+              button(type="submit").form__item-button.button.button--bordered Заказать
